@@ -53,7 +53,7 @@ npm run preview: Preview the production build.
 
 Sign up for a Netlify account if you don't have one.
 
-### 5.2 Connect to Your GitHub Repository
+### 5.2 Connect to our GitHub Repository
 
 On the Netlify dashboard, follow these steps:
 
