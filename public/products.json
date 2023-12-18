@@ -4946,6 +4946,38 @@
           "product_id": 7096254496949,
           "created_at": "2021-12-03T15:03:05+05:30",
           "updated_at": "2021-12-03T15:03:05+05:30"
+        },
+        {
+          "id": 414113684195088,
+          "title": "lightgrey / XL",
+          "option1": "lightgrey",
+          "option2": "XL",
+          "option3": null,
+          "sku": "YX159-89",
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 32375671586997,
+            "product_id": 7096254496949,
+            "position": 5,
+            "created_at": "2021-12-03T15:03:05+05:30",
+            "updated_at": "2021-12-03T15:03:05+05:30",
+            "alt": null,
+            "width": 900,
+            "height": 1140,
+            "src": "https://cdn.shopify.com/s/files/1/0581/7663/5061/products/5_e9891a29-5c85-4381-a538-2e6636b18e7e.jpg?v=1638523985",
+            "variant_ids": [
+              41411368419509
+            ]
+          },
+          "available": true,
+          "price": "71.50",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 5,
+          "product_id": 7096254496949,
+          "created_at": "2021-12-03T15:03:05+05:30",
+          "updated_at": "2021-12-03T15:03:05+05:30"
         }
       ],
       "images": [
