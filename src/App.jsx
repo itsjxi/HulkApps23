@@ -17,7 +17,7 @@ function App() {
       <div className='container'>
       <img src='/images/HulkApp.svg.svg'/>
     <h2>Featured Collection</h2>
-    <div style={{ width: "40%",textAlign: "center", marginBottom: "20px", color: "#7D7D7D"}}>
+    <div className= "hopme-para">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar ac tortor imperdiet commodo.</div>
       <ProductList/> 
       <BottomPage/>  

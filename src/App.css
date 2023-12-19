@@ -15,6 +15,7 @@
   --cart-header-border-color: black;
   --checkout-button-bg-color: #090909;
   --checkout-button-text-color: white;
+  --home-para-color: "#7D7D7D"
 }
 
 body {
@@ -33,6 +34,12 @@ body {
 
 .app {
   text-align: center;
+}
+.home-para{
+  width: "40%";
+  text-align: "center";
+  margin-bottom: "20px";
+  color: (--home-para-color)
 }
 
 .container {
