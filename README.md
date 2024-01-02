@@ -67,55 +67,5 @@ Netlify automatically triggers a new build and deploys our site.
 
 ### 5.4 Access Our Live Site
 
-Once the build is complete, our site will be live at [https://hulkappecoomerce.netlify.app/](https://hulkappecoomerce.netlify.app/).
+Once the build is complete, our site will be live at (https://hulkappecoomerce.netlify.app/).
 
-
-## Approach to the Project
-
-### 1. Deep Dive into Data:
-In the initial phase of the project, I conducted a comprehensive examination of the provided data. This involved scrutinizing the structure and content of the data to gain insights into the available information.
-
-### 2. Understanding UI Requirements:
-To effectively translate the data into a user interface, I carefully considered the UI requirements. This process involved visualizing how to present color and size options to users, especially focusing on products with variants to ensure a comprehensive approach.
-
-### 3. Implementing Variant Selection:
-A crucial aspect of the project was the implementation of variant selection. This involved allowing users to choose color and size and dynamically selecting the appropriate variant for adding to the cart. Implementing this functionality required meticulous handling of state changes and ensuring seamless connections between relevant components.
-
-## What I Liked
-
-I thoroughly enjoyed every aspect of this project, with a particular emphasis on the cart functionality. The integration of Redux Toolkit and React-Redux provided a seamless and efficient state management solution, contributing to an organized and scalable structure for the application.
-
-## Challenges Faced
-
-One notable challenge emerged during the implementation of variant selection and adding the selected variant to the cart. Navigating through state changes and establishing the correct component connections demanded careful consideration. Overcoming this obstacle proved to be a valuable learning experience, enhancing my understanding of React's state management and strengthening my overall problem-solving skills.
-
-## Estimated Time
-to complete the project it took me approximately 3 days 
-
-
-##  Tasks need to be done 
-
-### 1. AddToCart Functionality
-- [ ] Implement the AddToCart functionality.
-- [ ] Ensure that clicking the "Add To Cart" button adds the product to the cart.
-- [ ] Follow the behavior and UI specifications outlined in the XD file.
-
-### 2. Cart Drawer Functionality
-- [ ] Develop a Cart Drawer that displays items added to the cart.
-- [ ] Implement the ability to manage products using the quantity button.
-- [ ] Enable the removal of items from the cart drawer using the remove button.
-- [ ] Ensure that every action in the cart drawer reflects in the cart subtotal.
-
-### 3. Variant Selection
-- [ ] Implement the ability to select variants based on the combination of size and color.
-- [ ] Ensure that the selected variant is accurately added to the cart.
-
-## Completion Status
-
-- [ ] AddToCart functionality successfully implemented.
-- [ ] Cart Drawer functionality is complete, allowing users to manage and remove items with corresponding updates to the cart subtotal.
-- [ ] Variant selection based on size and color is implemented and functioning correctly.
-
-## Project Completion
-
-✅ **I have completed the entire project, including the implementation of AddToCart functionality, Cart Drawer features, and Variant Selection based on size and color. The project aligns with the specified behavior and UI outlined in the XD file. Also in Addition I try to make the site responsive too**
