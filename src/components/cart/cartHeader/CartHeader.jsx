@@ -6,10 +6,10 @@ const CartHeader = ({ cartItems, closeCart }) => {
     <>
       <div className="cart-header">
         <div className="cart-header-text">
-          <h1>YOUR BAG </h1>
-          <h3>
-            ({cartItems.reduce((acc, curr) => acc + curr.quantity, 0)} item)
-          </h3>
+          <h3>Your Bag</h3>
+          <span>
+            ({cartItems.reduce((acc, curr) => acc + curr.quantity, 0)} items)
+          </span>
         </div>
 
         <div className="close-cart" onClick={closeCart}>

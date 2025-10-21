@@ -7,18 +7,21 @@ const CartFooter = ({ calculateSubtotal }) => {
     <>
       <div className="cart-footer">
         <div className="subtotal">
-          <h2>Subtotal </h2> <h2>${calculateSubtotal().toFixed(2)}</h2>
+          <span>Subtotal</span> 
+          <span>${calculateSubtotal().toFixed(2)}</span>
         </div>
         <div className="checkout-section">
           <button
             className="checkout-button"
             onClick={() => console.log("Checkout")}
           >
-            Checkout
+            Proceed to Checkout
           </button>
         </div>
-        <p>Have promocode? Enter your code and checkout</p>
-        <p>Shipping and texes are calculated during checkout</p>
+        <div className="footer-info">
+          <p>Have a promo code? Enter your code at checkout</p>
+          <p>Shipping and taxes are calculated during checkout</p>
+        </div>
       </div>
     </>
   );

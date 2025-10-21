@@ -20,9 +20,25 @@ export const fetchProducts = createAsyncThunk(
 const productSlice = createSlice({
   name: 'products',
   initialState: {
-    products: [],
+    items: [],
+    filteredItems: [],
     status: 'idle',
     error: null,
+    filters: {
+      category: 'all',
+      priceRange: [0, 1000]
+    },
+    sortBy: 'featured'
+  },
+  reducers: {
+    setFilters: (state, action) => {
+      state.filters = { ...state.filters, ...action.payload };
+      state.filteredItems = applyFilters(state.items, state.filters, state.sortBy);
+    },
+    setSortBy: (state, action) => {
+      state.sortBy = action.payload;
+      state.filteredItems = applyFilters(state.items, state.filters, action.payload);
+    }
   },
   //handeling various states while feching the data 
   extraReducers: (builder) => { 
@@ -31,7 +47,8 @@ const productSlice = createSlice({
     })
     .addCase(fetchProducts.fulfilled, (state, action) => {
       state.status = 'succeeded';
-      state.products = action.payload;
+      state.items = action.payload;
+      state.filteredItems = action.payload;
     })
     .addCase(fetchProducts.rejected, (state, action) => {
       state.status = 'failed';
@@ -39,5 +56,49 @@ const productSlice = createSlice({
     });
   },
 });
+
+const applyFilters = (items, filters, sortBy) => {
+  let filtered = [...items];
+  
+  // Apply category filter
+  if (filters.category !== 'all') {
+    filtered = filtered.filter(item => 
+      item.product_type?.toLowerCase() === filters.category.toLowerCase()
+    );
+  }
+  
+  // Apply price filter
+  filtered = filtered.filter(item => {
+    const price = parseFloat(item.variants?.[0]?.price || 0);
+    return price >= filters.priceRange[0] && price <= filters.priceRange[1];
+  });
+  
+  // Apply sorting
+  switch (sortBy) {
+    case 'price-low':
+      filtered.sort((a, b) => {
+        const priceA = parseFloat(a.variants?.[0]?.price || 0);
+        const priceB = parseFloat(b.variants?.[0]?.price || 0);
+        return priceA - priceB;
+      });
+      break;
+    case 'price-high':
+      filtered.sort((a, b) => {
+        const priceA = parseFloat(a.variants?.[0]?.price || 0);
+        const priceB = parseFloat(b.variants?.[0]?.price || 0);
+        return priceB - priceA;
+      });
+      break;
+    case 'name':
+      filtered.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+      break;
+    default:
+      break;
+  }
+  
+  return filtered;
+};
+
+export const { setFilters, setSortBy } = productSlice.actions;
 
 export default productSlice.reducer;

@@ -7,7 +7,7 @@ import useCartFunctionality from "./UseCartFunctionality";
 
 const CartDisplay = ({ onCloseClick }) => {
    // Retrieve cart items from Redux store
-  const cartItems = useSelector((state) => state.cart);
+  const cartItems = useSelector((state) => state.cart?.items || []);
   const [handleIncrement,handleDecrement,handleRemoveItem,calculateSubtotal] = useCartFunctionality();
 
    // Function to close the cart

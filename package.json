@@ -5,27 +5,31 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node build.js",
+    "build-vite": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve": "node dev-server.js",
+    "start": "node dev-server.js"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.0.1",
+    "@reduxjs/toolkit": "^2.2.1",
+    "axios": "^1.6.7",
     "react": "^18.2.0",
-    "react-axios": "^2.0.6",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.12.0",
-    "react-redux": "^9.0.4",
-    "redux": "^5.0.0"
+    "react-icons": "^5.0.1",
+    "react-redux": "^9.1.0",
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "redux": "^5.0.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.43",
-    "@types/react-dom": "^18.2.17",
-    "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.55.0",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^2.2.0",
+    "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "vite": "^5.0.8"
+    "vite": "^3.2.10"
   }
 }

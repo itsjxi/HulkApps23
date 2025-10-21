@@ -8,7 +8,8 @@ const ProductList = () => {
   const dispatch = useDispatch();
 
   // Accessing Redux store state for products, status, and error
-  const products = useSelector((state) => state.products.products);
+  const products = useSelector((state) => state.products.filteredItems);
+  const allProducts = useSelector((state) => state.products.items);
   const status = useSelector((state) => state.products.status);
   const error = useSelector((state) => state.products.error);
 
@@ -27,10 +28,11 @@ const ProductList = () => {
     return <div>Error: {error}</div>;
   }
 
-  // Filter products based on a condition (options length > 1) and display a limited number of them as wee need the data which has more varients
-  const filteredProducts = products
-    .filter((product) => product.options.length > 1)
-    .slice(4, 8);
+  // Show filtered products or all products with variants
+  const displayProducts = products.length > 0 ? products : allProducts;
+  const filteredProducts = displayProducts.filter((product) => 
+    product.variants && product.variants.length > 0
+  ).slice(0, 12);
 
   // Render the filtered products using the Product component
   return (

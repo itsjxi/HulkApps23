@@ -5,9 +5,9 @@
 export const getCurrentVariant = (variants, selectedVariant) => {
   return variants.find(
     (variant) =>
-      (variant.option1.toLowerCase() === selectedVariant.color.toLowerCase() ||
+      ((variant.option1 && selectedVariant.color && variant.option1.toLowerCase() === selectedVariant.color.toLowerCase()) ||
         !selectedVariant.color) &&
-      (variant.option2.toLowerCase() === selectedVariant.size.toLowerCase() ||
+      ((variant.option2 && selectedVariant.size && variant.option2.toLowerCase() === selectedVariant.size.toLowerCase()) ||
         !selectedVariant.size)
   );
 };
